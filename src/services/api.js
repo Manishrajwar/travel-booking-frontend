@@ -1,6 +1,5 @@
 
 const baseurl = process.env.REACT_APP_BASE_URL
-
 const baseEndpoints = {
       CITIES: 'api/cities' , 
       TRIPS:'api/trips' , 

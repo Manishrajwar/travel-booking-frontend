@@ -159,7 +159,7 @@ setLoading(true);
                   <p className="perperontext"> ₹ {item.price}  </p>
                   <p className="perperontext"> {item?.description?.slice(0, 80)}...  </p>
 
-                    <button onClick={()=> navigate(`/packageDetail/${item.title}` , {state: item})} className="checkdetabtns1">
+                    <button onClick={()=> navigate(`/packageDetail` , {state: item})} className="checkdetabtns1">
                       <span>CHECK DETAILS</span>
                     </button>
                 </div>
