@@ -1,0 +1,95 @@
+.saletagwrap{
+    background: #0E3D4D;
+ width: 100%;
+ position: relative;
+ height: 42px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+.saletagwrap p{
+    font-family: Inter;
+    font-size: 13.99px;
+    font-weight: 500;
+    line-height: 16.31px;
+    text-align: center;
+color: #FFFFFF;    
+}
+
+
+.navbar2wrap{
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+
+    
+}
+
+
+
+.navbarCont2{
+        max-width: 1400px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 18px;
+        
+}
+
+.navitems2{
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+    width: 100%;
+justify-content: space-between;
+}
+
+.navitems2 li{
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.36px;
+    text-align: left;
+color: #112F38;    
+}
+.navbutton2{
+    width: 160px;
+height:  47px;
+border-radius: 24px;
+border: 2px solid #112F38;
+}
+.navbutton2 span{
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.36px;
+    text-align: left;
+color: #112F38;    
+}
+
+.IoReorderThreeSharp{
+    display: none;
+}
+
+.navbar2wrap.scrolled {
+    background-color: white;
+    padding: 14px 18px;
+    z-index: 1000;
+  }
+  .navbar2wrap.scrolled .navbarCont2 {
+    padding: 0px 18px;
+  }
+
+@media (max-width:750px) {
+    .IoReorderThreeSharp{
+        display: flex;
+        font-size: 50px;
+    }
+    .navitems2{
+        display: none;
+    }
+}

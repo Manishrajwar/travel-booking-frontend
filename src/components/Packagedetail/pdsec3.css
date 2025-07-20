@@ -1,0 +1,439 @@
+.pdsec3top{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    justify-content: center;
+    overflow: hidden;
+    height: 130px;
+    padding: 40px 0px;
+    
+}
+    .pdsec3top p {
+        border: 1px solid;
+        max-width: 424px;
+        width: 100%;
+        border: 1px solid;
+border-image-source: linear-gradient(90deg, rgba(225, 222, 222, 0.24) 0%, rgba(0, 135, 83, 0.8) 50%, rgba(227, 226, 226, 0.24) 100%);
+border-image-slice: 1;
+
+    }
+    
+.pdsec3top h3{
+    font-family: Grey Qo;
+    font-size: 96px;
+    min-width: 327px;
+    font-weight: 400;
+    line-height: 20px;
+color: #008753;    
+}
+
+.pdsec3secodiv{
+    width: 100%;
+padding: 20px;
+border-radius: 10px ;
+border: 1px solid #E1DFDF;
+margin: 40px 10px;
+display: flex;
+flex-direction: column;
+gap: 10px;
+list-style: none; 
+
+}
+.pdsec3secodiv2{
+    width: 100%;
+padding: 20px;
+border-radius: 10px ;
+border: 1px solid #E1DFDF;
+margin: 40px 10px;
+display: flex;
+flex-direction: column;
+gap: 10px;
+list-style: none; 
+
+}
+
+.pdsec3secodiv label{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+.pdsec3secodiv2 label{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.ddthrmargin{
+    margin-right: 70px;
+}
+
+.ttiwrap{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ttiwrap h4{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 26px;
+}
+
+.ttiwrap2{
+    display: none;
+}
+
+.bolabewraps{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+@media (max-width:670px) {
+    .ttiwrap{
+        display: none;
+    }
+    .ttiwrap2{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        border: 1px solid #E1DFDF;
+        border-radius: 10px;
+        padding: 5px 10px 0px 10px;
+
+    }
+    .toalcofd{
+ padding: 0px 10px;
+    }
+    .pdsec3secodiv2{
+        padding: 10px;
+    }
+    .ttiwrap2 h4{
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 26px;
+    }
+
+  
+    .bolabewraps{
+        border: 1px solid #E1DFDF;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    
+}
+
+.pdsec3secodiv label p{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    max-width: 80%;
+    
+}
+.pdsec3secodiv2 label p{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    /* padding: 0px 5px; */
+    line-height: 26px;
+    /* max-width: %; */
+    
+}
+.ttwratop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    /* padding: 0px 10px; */
+}
+.ttwratop span{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 26px;
+
+}
+.pdsec3secodiv label span{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    
+}
+.pdsec3secodiv2 label span{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    
+}
+
+
+.itempriceleft{
+    /* background-color: red; */
+  padding: 0px 80px 0px 0px;
+}
+
+
+.pdsec5wwrap{
+    width: 100%;
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+.pdsec5wwrap .singlediv{
+   display: flex;
+   flex-direction: column;
+   gap: 14px;
+   transition: all 0.3s ease-in-out;
+
+}
+ .singlediv .headingdiv{
+    border: 1px solid #E1DFDF;
+    width: 100%;
+height: 57px;
+border-radius: 10px ;
+display: flex;
+align-items: center;
+padding: 11px 22px;
+cursor: pointer;
+
+}
+ .singlediv .headingdiv p{
+    font-family: Poppins;
+    font-size: 22.22px;
+    font-weight: 600;
+    line-height: 33.34px;
+    text-align: left;
+color: #000000;    
+}
+
+.pdsecdtalines{
+    padding: 0px 16px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.pdsecdtalines li{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28.78px;
+    text-align: left;
+color: #000000;    
+}
+
+.viewgustdiv{
+    font-family: Poppins;
+font-size: 17.29px;
+font-weight: 600;
+line-height: 25.93px;
+text-align: left;
+color: #F86800;
+margin-top: 20px;
+}
+
+.pdsec5wwrap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.headingdiv p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.pdsecdtalines {
+    margin-top: 10px;
+    list-style-type: none;
+    padding-left: 20px;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.singlediv.open .pdsecdtalines {
+    max-height: 500px; /* Adjust as needed */
+    opacity: 1;
+}
+
+.singli {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.viewgustdiv {
+    margin-top: 10px;
+    font-style: italic;
+    color: #006400; /* Adjust color as needed */
+    cursor: pointer;
+}
+
+.pdsec5wwrap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.singlediv .headingdiv p {
+    font-family: Poppins;
+    font-size: 22.22px;
+    font-weight: 600;
+    line-height: 33.34px;
+    text-align: left;
+    color: #000000;
+    margin: 0;
+}
+
+
+@keyframes openAnimation {
+    from {
+        max-height: 0;
+        opacity: 0;
+        transform: scaleY(0);
+    }
+    to {
+        max-height: 500px; /* Adjust as needed */
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+
+@keyframes closeAnimation {
+    from {
+        max-height: 500px; /* Adjust as needed */
+        opacity: 1;
+        transform: scaleY(1);
+    }
+    to {
+        max-height: 0;
+        opacity: 0;
+        transform: scaleY(0);
+    }
+}
+
+.pdsecdtalines {
+    padding: 0px 16px;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    overflow: hidden;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.singlediv.open .pdsecdtalines {
+    animation-name: openAnimation;
+}
+
+.singlediv:not(.open) .pdsecdtalines {
+    animation-name: closeAnimation;
+}
+
+.pdsecdtalines li {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28.78px;
+    text-align: left;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+.viewgustdiv {
+    font-family: Poppins;
+    font-size: 17.29px;
+    font-weight: 600;
+    line-height: 25.93px;
+    text-align: left;
+    color: #F86800;
+    margin-top: 20px;
+    font-style: italic;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.viewgustdiv:hover {
+    color: #ff7f00;
+}
+
+.boldlabel p{
+    font-weight: 600 !important;
+}
+.boldlabel span{
+    font-weight: 600 !important;
+}
+
+.toalcofd p{
+    font-weight: 600 !important;
+}
+.toalcofd span{
+    font-weight: 600 !important;
+}
+
+@media (max-width:550px) {
+    .singlediv .headingdiv p{
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .pdsecdtalines li{
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .itempriceleft{
+        padding: 0px 0px 0px 0px;
+
+    }
+    .ttiwrap2 h4{
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .pdsec3secodiv2 label p{
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .ttwratop span{
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .pdsec3secodiv2 label span{
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
+
+@media (max-width:480px) {
+    .pdsec3top h3{
+       font-size: 50px;
+       min-width: 170px;
+    }
+   
+}
+
+.gratoflexwrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* gap: 5px; */
+    position: relative;
+}
+
+.strivenow{
+    position: absolute;
+    height: 1.5px ;
+    width: 54px;
+    top: 12px;
+    background-color: black;
+}

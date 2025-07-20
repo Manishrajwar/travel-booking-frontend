@@ -1,0 +1,24 @@
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import HomePage from "./pages/HomePage";
+import PackageDetail from "./pages/PackageDetail";
+import TravelChatbot from "./components/TravelChatbot";
+
+function App() {
+
+
+  return (
+  <div className="app">
+<Routes>
+
+  <Route path="/" element={<HomePage   />} />
+  <Route path="/packageDetail/:id" element={<PackageDetail />}  />
+
+</Routes>
+
+<TravelChatbot  />
+  </div>
+  );
+}
+
+export default App;
