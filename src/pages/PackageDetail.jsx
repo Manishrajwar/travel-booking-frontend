@@ -15,10 +15,11 @@ function PackageDetail() {
 
   const location = useLocation();
   const state = location.state;
-  console.log("state" ,state);
   const navigate = useNavigate();
 
   const [allAttraction , setAllAttractions] = useState([]);
+
+  const [loading , setLoading] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -28,7 +29,7 @@ function PackageDetail() {
 
   const fetchCityAttaraction = async()=>{
      try{
-
+         setLoading(true);
       const resp = await axios.get(Endpoints.GET_CITY_ATTRACTIONS +  `/${state.cityId}`)
        if(resp.data){
          setAllAttractions(resp.data.data);
@@ -36,6 +37,8 @@ function PackageDetail() {
 
      } catch(error){
        console.log(error);
+     } finally{
+      setLoading(false);
      }
   }
 
@@ -48,6 +51,7 @@ function PackageDetail() {
     }
   },[state , location])
 
+  const contactRef = useRef(null);
 
   return (
     <section className="packageWrap">
@@ -58,11 +62,11 @@ function PackageDetail() {
 
         <PdSec1Animation />
 
-        <PDSec2
+        <PDSec2 contactRef={contactRef}
         data={state}
         />
 
-             <CityAttraction location={state?.title} allAttraction={allAttraction} />
+       <CityAttraction loading={loading} contactRef={contactRef} location={state?.title} allAttraction={allAttraction} />
 
         <PDSec3 sectionRef2={sectionRef2} />
 

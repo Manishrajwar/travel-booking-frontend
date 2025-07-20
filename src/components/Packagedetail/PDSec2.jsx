@@ -7,7 +7,7 @@ import { Endpoints } from "../../services/api";
 import ShowHotels from "../ShowHotels";
 import toast from "react-hot-toast";
 
-function PDSec2({ data, isInView2 }) {
+function PDSec2({ contactRef , data, isInView2 }) {
 
 
   const [isInView, setIsInView] = useState(false);
@@ -15,6 +15,8 @@ function PDSec2({ data, isInView2 }) {
   const sectionRef = useRef(null);
   const sectionRef2 = useRef(null);
   const [disable , setDisable] = useState(false);
+    const [allHotels, setAllHotels] = useState([]);
+
 
   const [formData, setFormData] = useState({
     from_name: "",
@@ -41,51 +43,6 @@ function PDSec2({ data, isInView2 }) {
     }));
   };
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsInView(entry.isIntersecting);
-      },
-      {
-        threshold: 0.1,
-      }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
-  }, []);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsInView3(entry.isIntersecting);
-      },
-      {
-        threshold: 0.1,
-      }
-    );
-
-    if (sectionRef2.current) {
-      observer.observe(sectionRef2.current);
-    }
-
-    return () => {
-      if (sectionRef2.current) {
-        observer.unobserve(sectionRef2.current);
-      }
-    };
-  }, []);
-
-  const [allHotels, setAllHotels] = useState([]);
-
-
   const fetchHotelsHandler = async () => {
     try {
       const resp = await axios.get(
@@ -108,7 +65,7 @@ function PDSec2({ data, isInView2 }) {
 
   return (
     <>
-      <div className="pdSec2wrap ">
+      <div ref={contactRef} className="pdSec2wrap ">
         {/* left side */}
         <div className="pdSec2left">
      
