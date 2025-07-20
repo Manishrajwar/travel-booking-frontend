@@ -17,79 +17,84 @@ function TravelChatbot() {
       name: "Travel Bot"
     }
   ]);
-
- const rules = [
+const rules = [
+  // Greetings
   {
-    keywords: ["hi", "hello"],
+    keywords: ["hi", "hello", "hey"],
     answer: "Hello! Ask me about trips, hotels, or tourist spots."
   },
   {
-    keywords: ["help", "info"],
+    keywords: ["help", "info", "guide"],
     answer: "Sure! I can help you with trips, hotels, or must-visit places."
   },
 
+  // Manali
   {
-    keywords: ["trip", "manali"],
+    keywords: ["trip", "manali", "show", "package"],
     answer: "Top trips in Manali include Adventure Trip, Snow Fun, Paragliding Expedition and more!"
   },
   {
-    keywords: ["hotel", "manali"],
+    keywords: ["hotel", "manali", "stay", "best", "where"],
     answer: "Popular Manali hotels: Snow Valley Resort, Manali Heights, Himalayan Breeze Inn."
   },
   {
-    keywords: ["places", "manali"],
+    keywords: ["places", "manali", "visit", "see", "explore" , "What can I visit in manali?"],
     answer: "Must-visit in Manali: Solang Valley, Rohtang Pass, Hadimba Temple, Manu Temple."
   },
 
+  // Goa
   {
-    keywords: ["trip", "goa"],
+    keywords: ["trip", "goa", "show", "package"],
     answer: "Top Goa trips: Beach Holiday, Party Package, Island Hopping, Relaxation Spa."
   },
   {
-    keywords: ["hotel", "goa"],
+    keywords: ["hotel", "goa", "stay", "best", "where"],
     answer: "Best hotels in Goa: Goa Beach Resort, Ocean Pearl Goa, Coconut Grove Inn."
   },
   {
-    keywords: ["places", "goa"],
+    keywords: ["places", "goa", "visit", "see", "explore" , "What can I visit in goa?"],
     answer: "Popular in Goa: Baga Beach, Fort Aguada, Dudhsagar Falls, Basilica of Bom Jesus."
   },
 
+  // Jaipur
   {
-    keywords: ["trip", "jaipur"],
+    keywords: ["trip", "jaipur", "show", "package"],
     answer: "Jaipur trips: Heritage Tour, Food Trip, Royal Palace Stay, Camel Safari."
   },
   {
-    keywords: ["hotel", "jaipur"],
+    keywords: ["hotel", "jaipur", "stay", "best", "where"],
     answer: "Hotels in Jaipur: Jaipur Palace Hotel, Pink City Inn, Amber Fort Residency."
   },
   {
-    keywords: ["places", "jaipur"],
+    keywords: ["places", "jaipur", "visit", "see", "explore" , "What can I visit in Jaipur?"],
     answer: "Must-see in Jaipur: Amber Fort, Hawa Mahal, City Palace, Johari Bazaar."
   },
 
+  // Delhi
   {
-    keywords: ["trip", "delhi"],
+    keywords: ["trip", "delhi", "show", "package"],
     answer: "Delhi trips: Cultural Walk, Shopping Spree, Food Trail, Monuments Tour."
   },
   {
-    keywords: ["hotel", "delhi"],
+    keywords: ["hotel", "delhi", "stay", "best", "where"],
     answer: "Best hotels in Delhi: Delhi Grand, Red Fort Hotel, Connaught Inn."
   },
   {
-    keywords: ["places", "delhi"],
+    keywords: ["places", "delhi", "visit", "see", "explore" ,"What can I visit in delhi?"],
     answer: "Top Delhi attractions: Red Fort, Qutub Minar, India Gate, Lotus Temple."
   },
 
+  // Shimla
   {
-    keywords: ["trip", "shimla"],
+    keywords: ["trip", "shimla", "show", "package"],
     answer: "Shimla trips: Honeymoon, Family Trip, Toy Train Ride, Campfire Nights."
   },
   {
-    keywords: ["hotel", "shimla"],
+    keywords: ["hotel", "shimla", "stay", "best", "where"],
     answer: "Shimla stays: Shimla Hilltop, Mall Road Lodge, Evergreen Resort Shimla."
   },
   {
-    keywords: ["places", "shimla"],
+    keywords: ["places", "shimla", "visit", "see", "explore" , "What can I visit in shimla?"],
     answer: "Shimla highlights: Mall Road, Jakhoo Temple, Kufri, Christ Church."
   }
 ];

@@ -12,13 +12,14 @@ import axios from "axios";
 import { IoSearch } from "react-icons/io5";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import HomeSec5Skeleton from "../SkeletonUI/HomeSec5Skeleton";
 
 
 function Homesec5() {
   const swiperRef = useRef(null);
 
   const [cities, setCities] = useState([]);
-
+  const [loading , setLoading] = useState(false);
   const navigate = useNavigate();
 
   const [alltrips , setAllTrips] = useState([]);
@@ -27,6 +28,7 @@ function Homesec5() {
 
   const fetchAllCityTripHandler = async () => {
     try {
+      setLoading(true);
        const [cityresp , tripresp] = await Promise.all([
             axios.get(Endpoints.GET_ALL_CITIES) , 
             axios.get(Endpoints.GET_ALL_TRIPS) , 
@@ -40,6 +42,8 @@ function Homesec5() {
       }
     } catch (error) {
       console.log(error);
+    } finally{
+      setLoading(false);
     }
   };
 
@@ -58,7 +62,7 @@ function Homesec5() {
   const handleSearchClick = async() => {
     if (selectedCity) {
    try{
-
+setLoading(true);
     const resp = await axios.get(Endpoints.GET_TRIPS_BY_CITY + `/${selectedCity}`);
     if(resp.data){
        setAllTrips(resp.data?.data);
@@ -67,6 +71,8 @@ function Homesec5() {
    } catch(error){
      console.log("error",error);
      toast.error("Something went wrong, Please try again");
+   } finally{
+     setLoading(false);
    }
     } else {
       toast.error("Please select a city!");
@@ -132,7 +138,11 @@ function Homesec5() {
               },
             }}
           >
-            {alltrips.map((item, index) => (
+           {
+             loading  ? 
+             <HomeSec5Skeleton  />
+             :
+              alltrips.map((item, index) => (
               <SwiperSlide key={item.id || index}>
                 <div className="sec5Item">
                   <img src={item.img} alt="img" className="sec5img" />
@@ -154,7 +164,8 @@ function Homesec5() {
                     </button>
                 </div>
               </SwiperSlide>
-            ))}
+            ))
+           }
           </Swiper>
 
           <img

@@ -88,7 +88,6 @@ border-radius: 12px;
 
 }
 
-
 .sec5img{
     width: 100%;
     max-height: 189px;
@@ -164,19 +163,10 @@ color: #000000;
     }
     .hsec5cont h2{
         font-size: 28px;
-     
+       line-height: 38px;
     }
 }
 
-
-
-@media (max-width:370px) {
-    .hsec5cont h2{
-     font-size: 24px;
-     line-height: 34px;
-    }
-    
-}
 
 .city-search-wrap {
   display: flex;
@@ -288,5 +278,11 @@ div._3-QIY{
 @media (max-width:400px) {
     .chat_bot_container{
         max-width: 270px;
+    }
+}
+
+@media (max-width: 350px) {
+    .sec5Item{
+        height: 470px;
     }
 }

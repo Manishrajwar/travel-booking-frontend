@@ -6,7 +6,6 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import left from "../assets/leftbtns.png";
 import right from "../assets/rightbtns.png";
-import toast from "react-hot-toast";
 
 function CityAttraction({ allAttraction ,location }) {
   const swiperRef = useRef(null);
@@ -73,11 +72,9 @@ function CityAttraction({ allAttraction ,location }) {
                     {item?.description?.slice(0, 80)}..{" "}
                   </p>
 
-                  <button
-                    onClick={() => toast.success("Your Hotel has been Booked")}
-                    className="checkdetabtns1"
+                  <button className="checkdetabtns1"
                   >
-                    <span>Book Now</span>
+                    <span>Contact Us</span>
                   </button>
                 </div>
               </SwiperSlide>

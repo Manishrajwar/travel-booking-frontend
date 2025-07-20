@@ -12,6 +12,10 @@ function FrequentQuestion() {
 
   const FREQUENT_QUESTIONS = [
     {
+      ques: "Type of question for the  bot?",
+      ans: "Tell me about trips to [city] , Hotels in [city] , What are the best places to visit in [city]? , Plan a trip to [city] , I want a trip to [city] etc."
+    },
+    {
       ques: "Who developed this project?",
       ans: "This travel booking website was developed by Manish Singh Rajwar."
     },
@@ -21,7 +25,7 @@ function FrequentQuestion() {
     },
     {
       ques: "Github Repository",
-      ans: "Yes, the complete source code is available on GitHub as part of the submission."
+      ans: "Yes, the complete source code is available on GitHub as part of the submission. https://github.com/Manishrajwar/travel-booking-backend , https://github.com/Manishrajwar/travel-booking-frontend"
     },
     {
       ques: "How can I contact the developer?",

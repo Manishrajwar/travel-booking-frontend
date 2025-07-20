@@ -5,6 +5,7 @@ import PhoneInput from "react-phone-input-2";
 import axios from "axios";
 import { Endpoints } from "../../services/api";
 import ShowHotels from "../ShowHotels";
+import toast from "react-hot-toast";
 
 function PDSec2({ data, isInView2 }) {
 
@@ -13,6 +14,7 @@ function PDSec2({ data, isInView2 }) {
   const [isInView3, setIsInView3] = useState(false);
   const sectionRef = useRef(null);
   const sectionRef2 = useRef(null);
+  const [disable , setDisable] = useState(false);
 
   const [formData, setFormData] = useState({
     from_name: "",
@@ -90,8 +92,8 @@ function PDSec2({ data, isInView2 }) {
         Endpoints.GET_HOTEL_BY_CITY + `/${data?.cityId}`
       );
 
-      if (resp.data) {
-        setAllHotels(resp.data?.data);
+      if (resp?.data) {
+        setAllHotels(resp?.data?.data);
       }
     } catch (error) {
       console.log(error);
@@ -111,7 +113,7 @@ function PDSec2({ data, isInView2 }) {
         <div className="pdSec2left">
      
 
-          <h2> {data.title}</h2>
+          <h2> {data?.title}</h2>
 
 
           <div className="flex justify-between gap-2 items-center px-2">
@@ -151,7 +153,17 @@ function PDSec2({ data, isInView2 }) {
           >
             <h3> Contact Us Now!</h3>
 
-            <form>
+            <form onSubmit={(e)=>{
+              e.preventDefault();
+              
+              const toastId = toast.loading("Loading...");
+              setDisable(true);
+               setTimeout(()=>{
+                 toast.success("Our team will Contact You soon");
+                 toast.dismiss(toastId)
+                 setDisable(false);
+               },[2000])
+            }}>
               <label>
                 <p>
                   Full Name <span>*</span>
@@ -159,7 +171,7 @@ function PDSec2({ data, isInView2 }) {
                 <input
                   type="text"
                   name="from_name"
-                  value={formData.from_name}
+                  value={formData?.from_name}
                   onChange={handleChange}
                 />
               </label>
@@ -177,18 +189,6 @@ function PDSec2({ data, isInView2 }) {
                 />
               </label>
 
-              <label>
-                <p>
-                  Number Of Travellers <span>*</span>
-                </p>
-                <input
-                  type="number"
-                  name="nb_trav"
-                  value={formData.nb_trav}
-                  onChange={handleChange}
-                  required
-                />
-              </label>
 
               <PhoneInput
                 country={"in"}
@@ -229,7 +229,7 @@ function PDSec2({ data, isInView2 }) {
                 onChange={handleChange}
               ></textarea>
 
-              <button className="requeeqebtn">
+              <button disabled={disable} type="submit" className="requeeqebtn">
                 <span>Contact Us</span>
               </button>
             </form>

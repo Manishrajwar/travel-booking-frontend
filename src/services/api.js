@@ -1,5 +1,4 @@
 const baseurl = process.env.REACT_APP_BASE_URL
-// const baseurl = 'http://localhost:5000'
 
 const baseEndpoints = {
       CITIES: 'api/cities' , 
