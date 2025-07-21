@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Chat } from 'react-chat-module';
 import 'react-chat-module/dist/index.css';
-import "./styles.css"
+import "../components/styles.css"
 
 function TravelChatbot() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +13,7 @@ function TravelChatbot() {
       senderId: "bot",
       profilePicture: "https://res.cloudinary.com/dn3vbnvcs/image/upload/v1753009049/profile_kvtojm.png",
       type: "text",
-      text: "Hi! 👋 Ask me something like: 'Show me trips to Manali', 'Hotels in Goa', or 'Places to visit in Jaipur'",
+      text: "Hi! 👋 Ask me something regarding Manali , Goa , Delhi , Jaipur , Shimla. Like: hotels in goa ...",
       name: "Travel Bot"
     }
   ]);

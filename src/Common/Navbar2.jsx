@@ -1,11 +1,11 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import "./navbar.css";
 import logo from "../assets/logo.png";
 import { IoReorderThreeSharp } from "react-icons/io5";
 import { ImCross } from "react-icons/im";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
-import Popup from "./Popup";
+import NavbarLayout from "./NavbarLayout";
 
 const data = [
   {
@@ -45,8 +45,8 @@ function Navbar2() {
 
   return (
     <>
-      <div>
-        <div className={`navbar2wrap ${scrolled ? "scrolled" : ""}`}>
+      <NavbarLayout showContact={showContact} showAbout={showAbout} setShowAbout={setShowAbout} setShowContact={setShowContact}>
+          <div className={`navbar2wrap ${scrolled ? "scrolled" : ""}`}>
           <div className="navbarCont2">
             <NavLink to={"/"}>
               {" "}
@@ -61,7 +61,7 @@ function Navbar2() {
                     <li key={index}>{d.title}</li>{" "}
                   </NavLink>
                 ) : (
-                  <li
+                  <li className="cursor-pointer"
                     onClick={() => {
                       if (d.title === "AboutUs") {
                         setShowAbout(true);
@@ -125,23 +125,9 @@ function Navbar2() {
             )}
           </div>
         </motion.div>
-      </div>
 
-      <Popup isOpen={showAbout} onClose={() => setShowAbout(false)}>
-        <h2>About Us</h2>
-        <p>
-          We are a passionate travel booking agency helping you explore the
-          world with tailored trips, best hotels, and unforgettable experiences.
-        </p>
-      </Popup>
-
-      <Popup isOpen={showContact} onClose={() => setShowContact(false)}>
-        <h2>Contact Us</h2>
-        <p>
-          Have questions? Reach out to us anytime. Our team is ready to assist
-          you with your travel plans and make your journey smooth and memorable.
-        </p>
-      </Popup>
+      </NavbarLayout>
+      
     </>
   );
 }

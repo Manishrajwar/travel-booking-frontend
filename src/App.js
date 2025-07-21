@@ -2,7 +2,7 @@ import { Route, Routes, Navigate } from "react-router-dom";
 import "./App.css";
 import HomePage from "./pages/HomePage";
 import PackageDetail from "./pages/PackageDetail";
-import TravelChatbot from "./components/TravelChatbot";
+import TravelChatbot from "./Common/TravelChatbot";
 
 function App() {
   return (

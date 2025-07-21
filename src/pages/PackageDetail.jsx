@@ -6,7 +6,7 @@ import PDSec2 from "../components/Packagedetail/PDSec2";
 import PDSec3 from "../components/Packagedetail/PDSec3";
 import PdSec1Animation from "../components/Packagedetail/PdSec1Animation";
 import { useLocation, useNavigate } from "react-router-dom";
-import CityAttraction from "../components/CityAttraction";
+import CityAttraction from "../components/Packagedetail/CityAttraction";
 import axios from "axios";
 import { Endpoints } from "../services/api";
 

@@ -1,18 +1,18 @@
 import  { useEffect, useRef, useState } from "react";
-import "./styles.css";
+import "../../components/styles.css"
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
-import left from "../assets/leftbtns.png";
-import right from "../assets/rightbtns.png";
-import clock from "../assets/clock.png";
-import { Endpoints } from "../services/api";
+import left from "../../assets/leftbtns.png";
+import right from "../../assets/rightbtns.png";
+import clock from "../../assets/clock.png";
+import { Endpoints } from "../../services/api";
 import axios from "axios";
 import { IoSearch } from "react-icons/io5";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
-import HomeSec5Skeleton from "../SkeletonUI/HomeSec5Skeleton";
+import HomeSec5Skeleton from "../../SkeletonUI/HomeSec5Skeleton";
 
 
 function Homesec5() {

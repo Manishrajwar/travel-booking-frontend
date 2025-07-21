@@ -1,7 +1,7 @@
 import  { useState } from "react";
 import redicon from "../assets/read icon.png";
 import redicon1 from "../assets/read icon (1).png";
-import "./service.css";
+import "../components/service.css";
 
 function FrequentQuestion() {
   const [activeIndex, setActiveIndex] = useState(null);

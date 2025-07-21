@@ -552,6 +552,15 @@
   }
 }
 
+@media (max-width:1150px) {
+  .pdSec2wrap{
+    flex-direction: column;
+    align-items: center;
+  }
+  .pdSec2left{
+    max-width: 100%;
+  }
+}
 
 @media (max-width: 1024px) {
   .pdsec1cont {
@@ -562,9 +571,7 @@
   .pdsec1aniwrap {
     display: flex;
   }
-  .pdSec2Right {
-    display: none;
-  }
+ 
   .pdSec2wrap {
     padding: 10px 0px;
   }

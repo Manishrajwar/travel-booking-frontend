@@ -1,6 +1,6 @@
 import Home from "./Home";
-import Homesec5 from "../components/Homesec5";
-import FrequentQuestion from "../components/FrequentQuestion";
+import Homesec5 from "../components/HomePage/Homesec5";
+import FrequentQuestion from "../Common/FrequentQuestion";
 
 function HomePage() {
   return (

@@ -1,13 +1,15 @@
 import { useRef } from "react";
-import "./styles.css";
+import "../../components/styles.css"
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
-import left from "../assets/leftbtns.png";
-import right from "../assets/rightbtns.png";
+import left from "../../assets/leftbtns.png";
+import right from "../../assets/rightbtns.png";
+import toast from "react-hot-toast";
+import StarRatings from 'react-star-ratings';
 
-function CityAttraction({ allAttraction ,location }) {
+function ShowHotels({ allHotels }) {
   const swiperRef = useRef(null);
 
 
@@ -26,7 +28,7 @@ function CityAttraction({ allAttraction ,location }) {
   return (
     <div className="hsec5wrap">
       <div className="hsec5cont">
-        <h2>Must-Visit Places</h2>
+        <h2>Explore Hotels</h2>
 
         <div className="brwseritems">
           <img
@@ -47,7 +49,7 @@ function CityAttraction({ allAttraction ,location }) {
             ref={swiperRef}
             breakpoints={{
               1250: {
-                slidesPerView: 3,
+                slidesPerView: 2,
               },
               850: {
                 slidesPerView: 2,
@@ -57,24 +59,38 @@ function CityAttraction({ allAttraction ,location }) {
               },
             }}
           >
-            {allAttraction.map((item, index) => (
+            {allHotels.map((item, index) => (
               <SwiperSlide key={item.id || index}>
                 <div className="sec5Item">
                   <img src={item.image} alt="img" className="sec5img" />
 
-                    <p className="s5imepara">{item.name}</p>
+                  <div className="s5conteent">
+                    <div className="s5itemclock">
+                      <StarRatings
+                        rating={item.rating} 
+                        starRatedColor="#f5c518"
+                        starEmptyColor="#ccc"
+                        starDimension="20px"
+                        starSpacing="2px"
+                        numberOfStars={5}
+                        name="rating"
+                      />
+                    </div>
 
-                    <p>{location}</p>
-                
+                    <p className="s5imepara">{item.title}</p>
+                  </div>
 
+                  <p className="perperontext"> ₹ {item.pricePerNight} </p>
                   <p className="perperontext">
                     {" "}
                     {item?.description?.slice(0, 80)}..{" "}
                   </p>
 
-                  <button className="checkdetabtns1"
+                  <button
+                    onClick={() => toast.success("Your Hotel has been Booked")}
+                    className="checkdetabtns1"
                   >
-                    <span>Contact Us</span>
+                    <span>Book Now</span>
                   </button>
                 </div>
               </SwiperSlide>
@@ -94,4 +110,4 @@ function CityAttraction({ allAttraction ,location }) {
   );
 }
 
-export default CityAttraction;
+export default ShowHotels;

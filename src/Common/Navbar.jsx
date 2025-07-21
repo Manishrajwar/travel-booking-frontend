@@ -1,11 +1,11 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import "./common.css";
 import logo from "../assets/logo.png";
 import smallnav from "../assets/smallnav.png";
 import cross22 from "../assets/cross22.png";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
-import Popup from "./Popup";
+import NavbarLayout from "./NavbarLayout";
 
 const data = [
   {
@@ -45,7 +45,9 @@ function Navbar() {
 
   return (
     <>
-      <nav className={`navbarwrapper ${scrolled ? "scrolled" : ""}`}>
+     <NavbarLayout showContact={showContact} showAbout={showAbout} setShowAbout={setShowAbout} setShowContact={setShowContact} >
+
+       <nav className={`navbarwrapper ${scrolled ? "scrolled" : ""}`}>
         <div className="navcont">
           <NavLink to={"/"}>
             {" "}
@@ -127,7 +129,8 @@ function Navbar() {
           )}
         </div>
       </motion.div>
-
+     </NavbarLayout>
+{/* 
       <Popup isOpen={showAbout} onClose={() => setShowAbout(false)}>
         <h2>About Us</h2>
         <p>
@@ -142,7 +145,18 @@ function Navbar() {
           Have questions? Reach out to us anytime. Our team is ready to assist
           you with your travel plans and make your journey smooth and memorable.
         </p>
-      </Popup>
+
+      <form onSubmit={(e)=>{
+         e.preventDefault();
+          toast.success("Our team will Contact you soon!");
+          setShowContact(false);
+
+      }} className="inputbtns">
+           <input  type="text" placeholder="Enter Phone Number" required />
+
+         <button type="submit">Submit</button>
+         </form>
+      </Popup> */}
     </>
   );
 }

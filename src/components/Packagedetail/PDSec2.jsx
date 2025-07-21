@@ -4,7 +4,7 @@ import "react-phone-input-2/lib/style.css";
 import PhoneInput from "react-phone-input-2";
 import axios from "axios";
 import { Endpoints } from "../../services/api";
-import ShowHotels from "../ShowHotels";
+import ShowHotels from "../Packagedetail/ShowHotels";
 import toast from "react-hot-toast";
 
 function PDSec2({ contactRef , data, isInView2 }) {
@@ -65,7 +65,7 @@ function PDSec2({ contactRef , data, isInView2 }) {
 
   return (
     <>
-      <div ref={contactRef} className="pdSec2wrap ">
+      <div  className="pdSec2wrap ">
         {/* left side */}
         <div className="pdSec2left">
      
@@ -87,7 +87,7 @@ function PDSec2({ contactRef , data, isInView2 }) {
         </div>
 
         {/* right side  */}
-        <div className="pdSec2Right">
+        <div ref={contactRef} className="pdSec2Right">
 
           <div ref={sectionRef2} className="sec2ritop">
             <div className="s2ttop">
