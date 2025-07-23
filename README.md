@@ -5,7 +5,7 @@ This is a responsive travel booking website inspired by platforms like MakeMyTri
 
 ## 🚀 Frontend url Demo
 
-👉 [Live Link](https://sage-sable-4446eb.netlify.app/)
+👉 [Live Link](https://gregarious-malabi-797ca1.netlify.app/)
 
 <img width="1900" height="862" alt="image" src="https://github.com/user-attachments/assets/83b57d22-cf0e-44b2-93fc-20ba24ce2281" />
 
