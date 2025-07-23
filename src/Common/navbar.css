@@ -93,3 +93,139 @@ color: #112F38;
         display: none;
     }
 }
+
+
+/* this is for tstimoanl */
+
+/* TESTIMONAIL  */
+.testiwrap{
+    width: 100%;
+    position: relative;
+    background: #CDEE97;
+margin: 75px 0px;
+}
+
+.testiCont{
+    max-width: 1400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin: 0 auto;
+    padding: 80px 14px;
+}
+.testtop{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+.testtop p{
+    
+    width: fit-content;
+    padding: 10px 20px;
+    min-height: 32px;
+    height: fit-content;
+    border-radius: 24px ;
+    background: #000000;
+    font-family: Poppins;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 600;
+color: #FFFFFF;        
+}
+.testtop h2{
+    font-family: Manrope;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    text-align: center;
+color: #202939;    
+}
+
+
+
+.singletebox .starimg{
+    max-width: 136px;
+}
+
+.estipara{
+    font-family: Poppins;
+font-size: 18px;
+font-weight: 400;
+line-height: 28px;
+text-align: left;
+color: #697586;
+}
+
+.profildea{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.profildea img{
+ max-width: 48px;
+ max-height: 48px;
+ border-radius: 50%;
+}
+.profildea .profc{
+display: flex;
+flex-direction: column;
+gap: 2px;
+}
+.profildea .profc .namep{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+color: #202939;    
+}
+.profildea .profc .addpre{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+color: #697586;
+}
+
+
+
+
+.testiGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.singletebox {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 381px;
+    height: 335px;
+    justify-content: space-between;
+border-radius: 16px ;
+border: 1px solid #EEF2F6;
+background: #FFFFFF;
+box-shadow: 0px 12px 16px -4px #10182814;
+padding: 32px;
+display: flex;
+margin: 0 auto;
+flex-direction: column;
+gap: 24px;
+}
+
+
+
+@media (max-width:500px) {
+    .testtop h2{
+       
+        font-size: 30px;
+        
+    }
+
+}

@@ -4,7 +4,7 @@ import backgroundFilter from "../assets/homefilter.png";
 import Navbar from "../Common/Navbar";
 import {motion} from "framer-motion"
 
-function Home({setOpenform}) {
+function Home({setOpenform , likeHistory , setLikeHistory}) {
 
 
   return (
@@ -23,7 +23,7 @@ function Home({setOpenform}) {
         className="backgroundFilter"
       />
 
-      <Navbar setOpenform={setOpenform} />
+      <Navbar likeHistory={likeHistory} setLikeHistory={setLikeHistory} setOpenform={setOpenform} />
 
       <div className="homeCont">
 

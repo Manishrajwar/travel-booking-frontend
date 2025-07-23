@@ -1,6 +1,6 @@
 
 const baseurl = process.env.REACT_APP_BASE_URL
-
+// const baseurl = 'http://localhost:5000'
 
 const baseEndpoints = {
       CITIES: 'api/cities' , 
@@ -15,4 +15,5 @@ export const Endpoints = {
       GET_TRIPS_BY_CITY: `${baseurl}/${baseEndpoints.TRIPS}/get-trip-by-city` , 
       GET_HOTEL_BY_CITY: `${baseurl}/${baseEndpoints.HOTELS}/get-hotels-by-city` , 
       GET_CITY_ATTRACTIONS: `${baseurl}/${baseEndpoints.CITIES}/get-city-attractions` , 
+      GET_ALL_HOTELS: `${baseurl}/${baseEndpoints.HOTELS}/getAllHotels`
 }

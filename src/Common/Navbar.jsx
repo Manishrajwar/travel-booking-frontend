@@ -6,6 +6,8 @@ import cross22 from "../assets/cross22.png";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import NavbarLayout from "./NavbarLayout";
+import { FaBucket } from "react-icons/fa6";
+
 
 const data = [
   {
@@ -17,12 +19,12 @@ const data = [
     link: "/",
   },
   {
-    title: "Contact",
-    link: "/",
+    title: <FaBucket />, 
+    link: "/likes",
   },
 ];
 
-function Navbar() {
+function Navbar({likeHistory }) {
   const [opensidebar, setOpensidebar] = useState(false);
   const [showAbout, setShowAbout] = useState(false);
   const [showContact, setShowContact] = useState(false);
@@ -55,28 +57,30 @@ function Navbar() {
           </NavLink>
 
           <ul className="navitems">
-            {data.map((d, index) =>
-              index === 0 ? (
-                <NavLink to={d.link}>
-                  {" "}
-                  <li key={index}>{d.title}</li>{" "}
-                </NavLink>
-              ) : (
-                <li
-                  onClick={() => {
-                    if (d.title === "AboutUs") {
-                      setShowAbout(true);
-                    } else {
-                      setShowContact(true);
-                    }
-                  }}
-                  key={index}
-                >
-                  {d.title}
-                </li>
-              )
-            )}
-          </ul>
+  <NavLink to="/">
+    <li>Home</li>
+  </NavLink>
+
+  <li onClick={() => setShowAbout(true)}>AboutUs</li>
+
+  <NavLink to={"/likes"}>
+     <li  className="like-bucket">
+    <FaBucket  fontSize={22} />
+    {likeHistory.length > 0 && (
+      <motion.span
+        key={likeHistory.length} 
+        initial={{ y: -5 }}
+        animate={{ y: 0 }}
+        transition={{ type: "spring", stiffness: 300 }}
+        className="like-count-badge"
+      >
+        {likeHistory.length}
+      </motion.span>
+    )}
+  </li>
+  </NavLink>
+</ul>
+
 
           <img
             onClick={() => setOpensidebar(true)}
@@ -129,34 +133,9 @@ function Navbar() {
           )}
         </div>
       </motion.div>
+
      </NavbarLayout>
-{/* 
-      <Popup isOpen={showAbout} onClose={() => setShowAbout(false)}>
-        <h2>About Us</h2>
-        <p>
-          We are a passionate travel booking agency helping you explore the
-          world with tailored trips, best hotels, and unforgettable experiences.
-        </p>
-      </Popup>
 
-      <Popup isOpen={showContact} onClose={() => setShowContact(false)}>
-        <h2>Contact Us</h2>
-        <p>
-          Have questions? Reach out to us anytime. Our team is ready to assist
-          you with your travel plans and make your journey smooth and memorable.
-        </p>
-
-      <form onSubmit={(e)=>{
-         e.preventDefault();
-          toast.success("Our team will Contact you soon!");
-          setShowContact(false);
-
-      }} className="inputbtns">
-           <input  type="text" placeholder="Enter Phone Number" required />
-
-         <button type="submit">Submit</button>
-         </form>
-      </Popup> */}
     </>
   );
 }

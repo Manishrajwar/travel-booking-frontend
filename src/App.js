@@ -3,6 +3,7 @@ import "./App.css";
 import HomePage from "./pages/HomePage";
 import PackageDetail from "./pages/PackageDetail";
 import TravelChatbot from "./Common/TravelChatbot";
+import HotelLikePage from "./pages/HotelLikePage";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/packageDetail" element={<PackageDetail />} />
+        <Route path="/likes" element={<HotelLikePage />} />
         
         {/* <Route path="*" element={<Navigate to="/" />} /> */}
       </Routes>

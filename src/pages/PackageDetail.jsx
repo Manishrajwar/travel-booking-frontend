@@ -9,6 +9,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import CityAttraction from "../components/Packagedetail/CityAttraction";
 import axios from "axios";
 import { Endpoints } from "../services/api";
+import Testimonial from "../Common/Testimonial"
 
 function PackageDetail() {
 
@@ -68,9 +69,13 @@ function PackageDetail() {
 
        <CityAttraction loading={loading} contactRef={contactRef} location={state?.title} allAttraction={allAttraction} />
 
-        <PDSec3 sectionRef2={sectionRef2} />
 
       </div>
+
+              <Testimonial state={state} />
+
+
+        <PDSec3 sectionRef2={sectionRef2} />
 
     </section>
   );
